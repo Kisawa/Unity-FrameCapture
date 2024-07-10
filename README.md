@@ -4,6 +4,11 @@
 >support bloom post, extensible custom post-processing with IFrameCaptureFeatureHandle interface
 >timeline track
 
+__Default output directory:__
+
+![50f82535-901b-415e-bed3-48ecca3403c6](https://github.com/Kisawa/Unity-FrameCapture/assets/71002504/ea4e365c-941e-4bd6-bfa1-3bcc94b6f68d)
+
+
 add the Frame Capture Feature:
 (Adjust to the appropriate preview Settings when using bloom or Transparent-Effect, if you understand how layer blending works)
 
@@ -32,3 +37,8 @@ the frame capture track settings:
 the clip settings:  (click Start to play timeline and screenshot)
 
 ![image](https://github.com/Kisawa/Unity-FrameCapture/assets/71002504/1e3662c9-977c-43ba-9257-08030c306fd2)
+
+Timeline Extension example:  (Timeline.scene)
+
+![35a6644f-87c0-496d-aeec-4d1d8368afde](https://github.com/Kisawa/Unity-FrameCapture/assets/71002504/c080a85b-b245-4dd4-bdf7-782d4eac0302)
+
