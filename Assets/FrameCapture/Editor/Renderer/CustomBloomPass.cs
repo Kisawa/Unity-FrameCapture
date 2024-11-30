@@ -99,6 +99,7 @@ public class CustomBloomPass : ScriptableRenderPass
         // Material setup
         float scatter = Mathf.Lerp(0.05f, 0.95f, bloom.scatter.value);
         mat.SetVector(ShaderConstants._Params, new Vector4(scatter, clamp, threshold, thresholdKnee));
+        mat.SetVector("_BlitScaleBias", new Vector4(1, 1, 0, 0));
         CoreUtils.SetKeyword(mat, ShaderKeywordStrings.BloomHQ, bloom.highQualityFiltering.value);
         CoreUtils.SetKeyword(mat, ShaderKeywordStrings.UseRGBM, m_UseRGBM);
 
@@ -234,7 +235,7 @@ public class CustomBloomPass : ScriptableRenderPass
         public static readonly int _Bloom_Texture = Shader.PropertyToID("_CustomBloomTexture");
 
         public static readonly int _Params = Shader.PropertyToID("_Params");
-        public static readonly int _SourceTex = Shader.PropertyToID("_SourceTex");
+        public static readonly int _SourceTex = Shader.PropertyToID("_BlitTexture");
         public static readonly int _SourceTexLowMip = Shader.PropertyToID("_SourceTexLowMip");
         public static readonly int _Bloom_Params = Shader.PropertyToID("_Bloom_Params");
         public static readonly int _Bloom_RGBM = Shader.PropertyToID("_Bloom_RGBM");
